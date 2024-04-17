@@ -6,6 +6,36 @@
     overflow: none;
     border-radius: 6px;
   }
+  .search-btn {
+    background-color: #fe424d;
+    color: #fff;
+    border-radius: 25px;
+    padding: 0 1rem 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-btn p {
+    margin: 0;
+  }
+
+  .search-btn:hover {
+    background-color: #fe424d;
+    color: #fff;
+  }
+
+  .search-btn i {
+    display: inline;
+    margin-right: 0.5rem;
+  }
+
+  .search-inp {
+    border-radius: 25px;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    font-size: 1rem;
+    text-align: center;
+  }
 </style>
 
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
@@ -21,6 +51,20 @@
     >
       <span class="navbar-toggler-icon"></span>
     </button>
+    <div class="navbar-nav">
+      <form class="d-flex" role="search" action="/listings/search" method="get">
+        <input
+          class="form-control me-2 search-inp"
+          type="search"
+          placeholder="Search"
+          name="q"
+        />
+        <button class="btn search-btn" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <p>Search</p>
+        </button>
+      </form>
+    </div>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link hov-nav" href="/listings">All Listings</a>
